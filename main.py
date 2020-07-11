@@ -427,7 +427,7 @@ async def quote_error(ctx, error):
     raise error
 
 @bot.command()
-async def cooldown(ctx):
+async def cooldowns(ctx):
   em = discord.Embed(title = "Cooldowns", description = "", color = 0x7d386f)
   em.add_field(name = "`>quote`", value = "10 seconds")
   em.add_field(name = "`>gif`", value = "10 seconds")
