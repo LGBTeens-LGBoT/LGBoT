@@ -40,6 +40,22 @@ async def howgay(ctx, *, member: discord.Member):
   await ctx.send(embed=em)
 
 @bot.command()
+async def howsad(ctx, *, member: discord.Member):
+  rand = randint(1,100)
+  em = discord.Embed(title = "", description = "", color = 0x7d386f)
+  em.add_field(name = "{0.name}".format(member), value = "`{0.display_name}` is {1}% sad!".format(member, rand))
+  em.set_footer(text = "Bot by Trainsgender")
+  await ctx.send(embed=em)
+
+@bot.command()
+async def howhappy(ctx, *, member: discord.Member):
+  rand = randint(1,100)
+  em = discord.Embed(title = "", description = "", color = 0x7d386f)
+  em.add_field(name = "{0.name}".format(member), value = "`{0.display_name}` is {1}% happy!".format(member, rand))
+  em.set_footer(text = "Bot by Trainsgender")
+  await ctx.send(embed=em)
+  
+@bot.command()
 async def howchad(ctx, *, member: discord.Member):
   rand = randint(1,100)
   em = discord.Embed(title = "", description = "", color = 0x7d386f)
@@ -346,6 +362,8 @@ async def randomizers(ctx):
   em.add_field(name = "`>howvirgin <mention>`", value = "Gives a percentage")
   em.add_field(name = "`>howstupid <mention>`", value = "Gives a percentage")
   em.add_field(name = "`>howswitch <mention>`", value = "Gives a percentage")
+  em.add_field(name = "`>howsad <mention>`", value = "Gives a percentage")
+  em.add_field(name = "`>howhappy <mention>`", value = "Gives a percentage")
   em.add_field(name = "`>howchat <mention>`", value = "Gives a percentage")
   em.add_field(name = "`>howtall <mention>`", value = "Measures you")
   em.add_field(name = "`>howfamilyfriendly <mention>`", value = "Gives a percentage")
