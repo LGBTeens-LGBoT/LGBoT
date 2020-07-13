@@ -40,6 +40,14 @@ async def howgay(ctx, *, member: discord.Member):
   await ctx.send(embed=em)
 
 @bot.command()
+async def howemo(ctx, *, member: discord.Member):
+  rand = randint(1,100)
+  em = discord.Embed(title = "", description = "", color = 0x7d386f)
+  em.add_field(name = "{0.name}".format(member), value = "`{0.display_name}` is {1}% emo!".format(member, rand))
+  em.set_footer(text = "Bot by Trainsgender")
+  await ctx.send(embed=em)
+
+@bot.command()
 async def howsad(ctx, *, member: discord.Member):
   rand = randint(1,100)
   em = discord.Embed(title = "", description = "", color = 0x7d386f)
@@ -184,6 +192,16 @@ async def ppsize(ctx, *, member: discord.Member):
   string = "8" + pp + "D"
   em = discord.Embed(title = "", description = "", color = 0x7d386f)
   em.add_field(name = "{0.name}'s pp".format(member), value = "`{1}`".format(member, string))
+  em.set_footer(text = "Bot by Trainsgender")
+  await ctx.send(embed=em)
+
+@bot.command()
+async def asssize(ctx, *, member: discord.Member):
+  rand = randint(0,20)
+  pp = " " * rand
+  string = "(" + pp + ")"
+  em = discord.Embed(title = "", description = "", color = 0x7d386f)
+  em.add_field(name = "{0.name}'s ass".format(member), value = "`{1}`".format(member, string))
   em.set_footer(text = "Bot by Trainsgender")
   await ctx.send(embed=em)
 
@@ -360,11 +378,13 @@ async def randomizers(ctx):
   em.add_field(name = "`>howmidget <mention>`", value = "Gives a percentage")
   em.add_field(name = "`>howtop <mention>`", value = "Gives a percentage")
   em.add_field(name = "`>howvirgin <mention>`", value = "Gives a percentage")
+  em.add_field(name = "`>howemo <mention>`", value = "Gives a percentage")
   em.add_field(name = "`>howstupid <mention>`", value = "Gives a percentage")
   em.add_field(name = "`>howswitch <mention>`", value = "Gives a percentage")
   em.add_field(name = "`>howsad <mention>`", value = "Gives a percentage")
   em.add_field(name = "`>howhappy <mention>`", value = "Gives a percentage")
-  em.add_field(name = "`>howchat <mention>`", value = "Gives a percentage")
+  em.add_field(name = "`>howchad <mention>`", value = "Gives a percentage")
+  em.add_field(name = "`>asssize <mention>`", value = "your ass")
   em.add_field(name = "`>howtall <mention>`", value = "Measures you")
   em.add_field(name = "`>howfamilyfriendly <mention>`", value = "Gives a percentage")
   em.add_field(name = "`>match <mention>`", value = "Finds you a good match to date")
