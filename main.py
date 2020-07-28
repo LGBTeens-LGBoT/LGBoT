@@ -40,6 +40,14 @@ async def howgay(ctx, *, member: discord.Member):
   await ctx.send(embed=em)
 
 @bot.command()
+async def how(ctx, arg, *, member: discord.Member):
+  rand = randint(1,100)
+  em = discord.Embed(title = "", description = "", color = 0x7d386f)
+  em.add_field(name = "{0.name}".format(member), value = "`{0.display_name}` is {1}% {2}!".format(member, rand, arg))
+  em.set_footer(text = "Bot by Trainsgender")
+  await ctx.send(embed=em)
+
+@bot.command()
 async def howemo(ctx, *, member: discord.Member):
   rand = randint(1,100)
   em = discord.Embed(title = "", description = "", color = 0x7d386f)
@@ -359,44 +367,7 @@ async def diceroll_error(ctx, error):
 @bot.command()
 
 async def randomizers(ctx):
-  em = discord.Embed(title = "LGBOT", description = "Randomizer commands", color = 0x7d386f)
-  em.add_field(name = "`>howgay <mention>`", value = "Gives a percentage")
-  em.add_field(name = "`>howbi <mention>`", value = "Gives a percentage")
-  em.add_field(name = "`>howasexual <mention>`", value = "Gives a percentage")
-  em.add_field(name = "`>howpan <mention>`", value = "Gives a percentage")
-  em.add_field(name = "`>howfurry <mention>`", value = "Gives a percentage")
-  em.add_field(name = "`>howgray <mention>`", value = "Gives a percentage")
-  em.add_field(name = "`>howfemboy <mention>`", value = "Gives a percentage")
-  em.add_field(name = "`>howcis <mention>`", value = "Gives a percentage")
-  em.add_field(name = "`>howhorny <mention>`", value = "Gives a percentage")
-  em.add_field(name = "`>howtrans <mention>`", value = "Gives a percentage")
-  em.add_field(name = "`>howlesbian <mention>`", value = "Gives a percentage")
-  em.add_field(name = "`>howstraight <mention>`", value = "Gives a percentage")
-  em.add_field(name = "`>howcute <mention>`", value = "Gives a percentage")
-  em.add_field(name = "`>howsimp <mention>`", value = "Gives a percentage")
-  em.add_field(name = "`>howbottom <mention>`", value = "Gives a percentage")
-  em.add_field(name = "`>howmidget <mention>`", value = "Gives a percentage")
-  em.add_field(name = "`>howtop <mention>`", value = "Gives a percentage")
-  em.add_field(name = "`>howvirgin <mention>`", value = "Gives a percentage")
-  em.add_field(name = "`>howemo <mention>`", value = "Gives a percentage")
-  em.add_field(name = "`>howstupid <mention>`", value = "Gives a percentage")
-  em.add_field(name = "`>howswitch <mention>`", value = "Gives a percentage")
-  em.add_field(name = "`>howsad <mention>`", value = "Gives a percentage")
-  em.add_field(name = "`>howhappy <mention>`", value = "Gives a percentage")
-  em.add_field(name = "`>howchad <mention>`", value = "Gives a percentage")
-  em.add_field(name = "`>asssize <mention>`", value = "your ass")
-  em.add_field(name = "`>howtall <mention>`", value = "Measures you")
-  em.add_field(name = "`>howfamilyfriendly <mention>`", value = "Gives a percentage")
-  em.add_field(name = "`>match <mention>`", value = "Finds you a good match to date")
-  em.add_field(name = "`>ppsize <mention>`", value = "How big is pp")
-  em.add_field(name = "`>coochiesize <mention>`", value = "How big is coochie")
-  em.add_field(name = "`>coinflip`", value = "Heads or tails")
-  em.add_field(name = "`>diceroll <number of sides>`", value = ":game_die:")
-  em.add_field(name = "`>whoiscuter <mention> <mention>`", value = ":pleading_face:")
-  
-  
-  em.set_footer(text = "Bot by Trainsgender") 
-  await ctx.send(embed=em)
+  await ctx.send("https://github.com/LGBTeens-LGBoT/LGBoT/blob/master/README.md#all-randomized-commands")
   
 
 @bot.command()
